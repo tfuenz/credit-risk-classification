@@ -1,1 +1,9 @@
 # credit-risk-classification
+
+The analysis detailed in this jupyter file concerns the categorization of borrowers based off various financial facts datapoints. This data included the following categories: loan size, interest rate, borrower income, debt to income ratio, number of borrower accounts, derogatory marks, and their total debt. With these points, the users had their loan status categorized as either 0 meaning the loans were in a "healthy" state, or 1, the loans were in an unhealthy state. Thus, our objective is to predict which health state the user is in using a supervised machine learning model.
+
+We started off our model by splitting the data into features and labels and then performing the train_test_split function from sklearn. This allowed us to receive a set of features and labels to perform a logisitic regression model on, namely the features and labels to be trained. The predictions meanwhile were created using the test components and with these two steps completed, we were able to evaluate the model's performance by using a confusion matrix. This matrix obtained for us the values needed to generate our classification report whose results are detailed below.
+
+The results detailed in the classification report were as follows: 
+The logistic regression model is able to predict with perfect precision that a loan should be labeled healthy as we see the 1st class reflects a 1.00 score for precision. Meanwhile, the 2nd class only reflects a 0.85 precision which for the sake of a credit analysis is not a horrible rate of precision. In any case, it does significantly better predicting healthy loans than unhealthy loans.
+The recall followed a similar pattern but was only at 0.99 value for the 1st class which means that a minimal amount of true positives were mislabeled. Overall, the accuracy of the model was quite high given that the 1st class contained almost 19000 data points whereas the 2nd class had less than 1000.
